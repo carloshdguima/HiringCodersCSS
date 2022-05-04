@@ -5,6 +5,8 @@
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=0'>
     <link rel="stylesheet" href="styles.css">
+    <script src="https://kit.fontawesome.com/d0578efe60.js" crossorigin="anonymous"></script>
+
 
     <title>Carlos Guimarães</title>
     
@@ -33,7 +35,12 @@
                 <h5>Full-Stack Developer</h5>
             </div>
 
-            <div id="about">
+            <div onclick="displayAbout()" id="arrow">
+                <i id="animation" class="fa-solid fa-arrow-down-short-wide"></i>
+            </div>
+
+
+            <div style="display: none" id="about">
                 <p>
                     Meu nome é Carlos Henrique Diniz Guimarães. Eu sou
                     Engenheiro Químico com Mestrado pela Universidade Autónoma de Madrid (UAM) em Renováveis
@@ -60,7 +67,14 @@
 
     </main>
 
-
+<script>
+    function displayAbout(){ {
+        var arrow = document.getElementById('animation');
+        arrow.classList.toggle('rotate');
+        var display = document.getElementById('about');
+        display.classList.toggle('active');
+    }}
+</script>
 
 </body>
 </html>
